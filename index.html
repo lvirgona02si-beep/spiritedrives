@@ -220,12 +220,12 @@
       <div class="gallery__viewport">
         <div class="gallery__track" id="galleryTrack">
           <div class="gallery__slide" data-index="0">
-            <video controls preload="metadata">
+            <video controls preload="metadata" poster="assets/video/event-feature-poster.jpg">
               <source src="assets/video/event-feature.mp4" type="video/mp4">
             </video>
           </div>
           <div class="gallery__slide" data-index="1">
-            <video controls preload="metadata">
+            <video controls preload="metadata" poster="assets/video/sneak-peek-poster.jpg">
               <source src="assets/video/sneak-peek-montage.mp4" type="video/mp4">
             </video>
           </div>
@@ -244,11 +244,17 @@
       </div>
       <div class="gallery__thumbs">
         <button class="gallery__thumb is-active" data-index="0">
-          <span class="gallery__thumb-media gallery__thumb-media--video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="gallery__thumb-media gallery__thumb-media--video">
+            <img src="assets/video/event-feature-poster.jpg" alt="">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
           <span>Feature Video</span>
         </button>
         <button class="gallery__thumb" data-index="1">
-          <span class="gallery__thumb-media gallery__thumb-media--video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="gallery__thumb-media gallery__thumb-media--video">
+            <img src="assets/video/sneak-peek-poster.jpg" alt="">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
           <span>Sneak Peek</span>
         </button>
         <button class="gallery__thumb" data-index="2">
