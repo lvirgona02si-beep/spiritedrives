@@ -158,8 +158,10 @@ if (routeRail && routeList) {
 // Book form (front-end only placeholder — wire to real backend/CRM later)
 const bookForm = document.getElementById('bookForm');
 const bookSuccess = document.getElementById('bookSuccess');
-bookForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  bookForm.style.display = 'none';
-  bookSuccess.classList.add('is-visible');
-});
+if (bookForm) {
+  bookForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    bookForm.style.display = 'none';
+    bookSuccess.classList.add('is-visible');
+  });
+}
