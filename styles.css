@@ -333,6 +333,11 @@ h1, h2, h3, h4, p { margin: 0; }
   font-weight: 600;
   margin-right: 5px;
 }
+.hero__meta .hero__meta-full, .hero__meta .hero__meta-short {
+  color: inherit;
+  font-weight: 400;
+  margin-right: 0;
+}
 .hero__media {
   position: relative;
   aspect-ratio: 4 / 5;
@@ -733,7 +738,14 @@ h1, h2, h3, h4, p { margin: 0; }
   background: #0a0a09;
   overflow: hidden;
 }
-.garage-slide__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.garage-slide__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 
 .garage-slide__scrim-top {
   position: absolute;
@@ -812,9 +824,12 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 .garage-slide__statbar::-webkit-scrollbar { display: none; }
 
-@media (max-width: 899px) {
+@media (max-width: 699px) {
   .garage-slide__media { aspect-ratio: 1 / 1; }
   .garage-slide__media img { object-fit: contain; }
+}
+
+@media (max-width: 899px) {
   .garage-slide__statbar {
     flex-wrap: wrap;
     row-gap: 10px;
@@ -878,7 +893,7 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 
 .garage-slide__drivetrain {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
@@ -900,14 +915,11 @@ h1, h2, h3, h4, p { margin: 0; }
   line-height: 1;
 }
 
-@media (min-width: 560px) {
-  .garage-slide__drivetrain { display: flex; }
-}
-
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .stat-col__bar { width: 90px; }
   .garage-slide__drivetrain svg { width: 24px; height: 38px; }
   .garage-slide__flag { font-size: 34px; }
+  .garage-slide__media { aspect-ratio: 16 / 9; }
 }
 
 @media (min-width: 900px) {
@@ -1014,6 +1026,15 @@ h1, h2, h3, h4, p { margin: 0; }
 .inclusions__col li svg { flex-shrink: 0; margin-top: 3px; width: 16px; height: 16px; }
 .inclusions__col:not(.inclusions__col--dark) li svg { color: var(--green); }
 .inclusions__col--dark li svg { color: var(--gold); }
+
+@media (max-width: 849px) {
+  .inclusions__col {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 @media (min-width: 850px) {
   .inclusions__grid { grid-template-columns: 1fr 1fr; }
